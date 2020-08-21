@@ -1,0 +1,18 @@
+server:
+  port: 1011
+  
+spring:
+  application:
+    name: app-user
+    
+eureka:
+  client:
+    service-url: 
+      defaultZone: http://localhost:8001/eureka
+  instance:
+    instance-id: app-user1011
+    
+user:
+  default:
+    age: 18
+    name: sl
