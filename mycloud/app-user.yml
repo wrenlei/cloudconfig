@@ -2,6 +2,7 @@ server:
   port: 1011
   
 spring:
+  profiles: dev #开发环境
   application:
     name: app-user
     
@@ -16,3 +17,25 @@ user:
   default:
     age: 18
     name: sl
+---    
+server:
+  port: 1011
+  
+spring:
+  profiles: test #开发环境
+  application:
+    name: app-user
+    
+eureka:
+  client:
+    service-url: 
+      defaultZone: http://localhost:8001/eureka
+  instance:
+    instance-id: app-user1011
+    
+user:
+  default:
+    age: 181
+    name: sl1
+    
+    
